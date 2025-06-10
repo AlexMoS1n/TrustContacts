@@ -1,0 +1,35 @@
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    networks:
+      - postgres_network
+    env_file:
+      - backend/.env
+    ports:
+      - 5433:5432
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    networks:
+      - postgres_network
+    env_file:
+      - backend/.env
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin/data
+    ports:
+      - 8080:80
+    depends_on:
+      - postgres
+    restart: unless-stopped
+
+networks:
+  postgres_network:
+
+volumes:
+  postgres-data:
+  pgadmin-data:
