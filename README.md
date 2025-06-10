@@ -1,6 +1,6 @@
 # TrustContacts
 ## Решение тестового задания менеджера контактов
-[Ссылка на репозиторий](https://github.com/AlexMoS1n/film-react-nest)
+[Ссылка на репозиторий](https://github.com/AlexMoS1n/TrustContacts)
 
 ## Описание проекта
 Веб-приложение TrustContacts — простейший менеджер контактов:
