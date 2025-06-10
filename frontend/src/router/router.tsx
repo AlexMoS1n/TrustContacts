@@ -4,6 +4,7 @@ import ErrorPage from "../pages/ErrorPage";
 import Home from "../pages/Home";
 import Contacts from "../pages/Contacts";
 import Auth from "../pages/Auth";
+import ProtectedRoute from "../components/PotectedRoute";
 
 export const router = createBrowserRouter([
   {
@@ -17,7 +18,11 @@ export const router = createBrowserRouter([
       },
       {
         path: 'contacts',
-        element: <Contacts />
+        element: (
+          <ProtectedRoute>
+            <Contacts />
+          </ProtectedRoute>
+        )
       },
       {
         path: 'auth',
