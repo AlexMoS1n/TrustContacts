@@ -32,7 +32,7 @@ export class UsersService {
       password: await argon2.hash(createUserDto.password),
     });
     const token = this.jwtService.sign({ email: createUserDto.email });
-    return { user, token };
+    return { email: user.email, id: user.id, token };
   }
 
   async findOne(email: string): Promise<UserEntity> {
