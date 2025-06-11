@@ -15,7 +15,7 @@
 ## Задачи
 ### Требования к бэкэнду
  - АPI - REST или GraphQL на выбор. Основные эндпоинты: /contacts, POST /contacts, PUT contacts/:id, DELETE /contacts/:id. 
- - Данные - Сущность Contact: id, name, phone, email, tags? string[],lastInteraction?: Date. Храните в памяти, БД, SQLite или JSON файле — что быстрее для вас.
+ - Данные - Сущность Contact: id, name, phone, email, tags? string[], lastInteraction?: Date. Храните в памяти, БД, SQLite или JSON файле — что быстрее для вас.
  - Auth (минимально) - любой простой вариант: hard-coded JWT, Basic Auth или
  куки с «тестовым» токеном.
  - Стек - Node.js + любой фреймворк (Nest будет бонусом).
