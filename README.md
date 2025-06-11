@@ -34,7 +34,7 @@
 
 ### Звёздочки (не обязательно, но даёт + к оценке)
  - Nest.js на бэке.
- - Unit/Integr/E2Eтесты (Jest/Plaid/Playwright — на ваш выбор).
+ - Unit/Integr/E2E тесты (Jest/Plaid/Playwright — на ваш выбор).
  - Docker / Docker Compose для быстрого поднятия окружения.
  - Соцсети: автоматически подтягивать аватар из Telegram/VK, если успеете.
  - Деплой на хостинг.
