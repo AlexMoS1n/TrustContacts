@@ -1,0 +1,106 @@
+// Variables
+$primary-color: #4361ee;
+$error-color: #e63946;
+$text-color: #2b2d42;
+$light-text: #8d99ae;
+$white: #ffffff;
+$transition: all 0.3s ease;
+
+// Base styles
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  padding: 2rem;
+}
+
+.authMessage {
+  text-align: center;
+  max-width: 500px;
+  padding: 3rem;
+  background: $white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease;
+}
+
+.icon {
+  font-size: 3.5rem;
+  color: $error-color;
+  margin-bottom: 1.5rem;
+  animation: bounce 1s ease infinite alternate;
+}
+
+.title {
+  color: $error-color;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: $text-color;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.loginButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: $primary-color;
+  color: $white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: $transition;
+  box-shadow: 0 4px 15px rgba(67, 97, 238, 0.2);
+
+  &:hover {
+    background: darken($primary-color, 8%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(67, 97, 238, 0.3);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.buttonIcon {
+  font-size: 1.2rem;
+}
+
+// Animations
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-10px); }
+}
+
+// Responsive
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .authMessage {
+    padding: 2rem 1.5rem;
+  }
+
+  .title {
+    font-size: 1.7rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}

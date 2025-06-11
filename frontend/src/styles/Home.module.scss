@@ -1,0 +1,161 @@
+$primary-color: #4361ee;
+$secondary-color: #3f37c9;
+$accent-color: #4cc9f0;
+$text-color: #2b2d42;
+$light-text: #8d99ae;
+$white: #ffffff;
+$gradient: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+$shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+$card-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+$transition: all 0.3s ease;
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fa;
+}
+
+.hero {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: $gradient;
+  color: $white;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  margin-bottom: 3rem;
+  
+  @media (max-width: 768px) {
+    padding: 3rem 1rem;
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+  }
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: fadeInDown 0.8s ease;
+  
+  @media (max-width: 768px) {
+    font-size: 2.2rem;
+  }
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  opacity: 0.9;
+  animation: fadeIn 1s ease 0.3s forwards;
+  opacity: 0;
+  
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  animation: fadeInUp 0.8s ease 0.5s forwards;
+  opacity: 0;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.featureCard {
+  background: $white;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 280px;
+  box-shadow: $card-shadow;
+  transition: $transition;
+  color: $text-color;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  h3 {
+    margin: 1rem 0 0.5rem;
+    color: $primary-color;
+  }
+  
+  p {
+    color: $light-text;
+    font-size: 0.95rem;
+  }
+}
+
+.featureIcon {
+  font-size: 2.5rem;
+  color: $primary-color;
+  margin-bottom: 1rem;
+}
+
+.cta {
+  text-align: center;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 600px;
+  
+  p {
+    font-size: 1.2rem;
+    color: $text-color;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.ctaButton {
+  background: $primary-color;
+  color: $white;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: $transition;
+  box-shadow: $shadow;
+  
+  &:hover {
+    background: $secondary-color;
+    transform: translateY(-2px);
+    box-shadow: 0 15px 25px rgba(67, 97, 238, 0.3);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

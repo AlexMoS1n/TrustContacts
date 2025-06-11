@@ -8,7 +8,7 @@ import { useEffect } from "react";
 
 function App() {
   const dispatch = useAppDispatch();
-  const checkAuth = async () => {
+    const checkAuth = async () => {
     const token = getTokenFromLocalStorage();
     try {
       if(token) {
@@ -23,7 +23,6 @@ function App() {
       console.log(error);
     }
   }
-
   useEffect(() => {
     checkAuth()
   }, [])
