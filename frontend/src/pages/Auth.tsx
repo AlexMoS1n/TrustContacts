@@ -38,9 +38,10 @@ const Auth: FC = () => {
         }
       }
     } catch (err: any) {
-      const error = err.response?.data.message;
-      toast.error(error.toString());
-    } finally {
+        console.error('Auth error:', err);
+        const errorMessage = err.response?.data?.message || err.message || 'Неизвестная ошибка';
+        toast.error(errorMessage);
+      } finally {
       setIsLoading(false);
     }
   }
